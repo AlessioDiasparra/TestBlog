@@ -1,9 +1,11 @@
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+function AboutPage() {
   return (
     <div className={styles.container}>
-      <main>Home</main>
+      <h1>About PAGE</h1>
     </div>
   );
 }
+
+export default AboutPage;
