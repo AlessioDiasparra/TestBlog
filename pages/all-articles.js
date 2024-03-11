@@ -20,7 +20,7 @@ export default function AllArticles(props) {
         <Link href={`/articles/${article.slug}`} passHref key={article.id}>
           <a className="shadow-md hover:shadow-xl transition ease-in rounded-md">
             <div className="relative w-full h-36 bg-slate-700">
-              <Image src={article.coverImage.url} layout="fill" objectFit="cover" />
+              <Image src={article.coverImage?.url} layout="fill" objectFit="cover" />
             </div>
 
             <div className="p-3">
