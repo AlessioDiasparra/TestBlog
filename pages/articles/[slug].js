@@ -23,16 +23,19 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export default function ArticlePage({ post }) {
-  // render <UI>
-  return (
-    <div className="w-9/12 m-auto">
-      <h1 className="text text-3xl font-bold">{post.title}</h1>
-      <p className="italic text-xs">
-        da <b>{post.author?.name}</b>
-      </p>
 
-      <p className="text-xs mt-8" dangerouslySetInnerHTML={{ __html: post.content?.html }}></p>
+export default function ArticlePage({ post }) {
+  return (
+    <div className="px-4 sm:px-6 lg:px-8 py-8 mx-auto">
+      <div className="sm:flex sm:items-center">
+        <div className="sm:flex-auto">
+          <h1 className="text-2xl font-bold leading-6 text-gray-900">{post.title}</h1>
+          <p className="mt-1 text-sm text-gray-500">
+            da <b>{post.author?.name}</b>
+          </p>
+        </div>
+      </div>
+      <div className="mt-4 sm:mt-6 text-gray-600 text-sm" dangerouslySetInnerHTML={{ __html: post.content?.html }}></div>
     </div>
   );
 }
